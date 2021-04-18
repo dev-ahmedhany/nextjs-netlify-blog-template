@@ -8,6 +8,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import { parseISO } from 'date-fns';
 import PostLayout from "../../components/PostLayout";
+import RandomTweet from "../../components/RandomTweet";
 
 import YouTube from "react-youtube";
 
@@ -48,6 +49,7 @@ export default function Post({
       description={description}
     >
       {content}
+      <RandomTweet/>
     </PostLayout>
   )
 }
