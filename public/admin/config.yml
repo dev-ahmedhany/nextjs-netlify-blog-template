@@ -142,3 +142,19 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+
+  - name: "tweets"
+    label: "Tweets"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "tweets"
+        label: "Tweets"
+        file: "content/tweets.json"
+        description: "Tweets Ids"
+        widget: "list"
+        field:
+          label: ID
+          name: id
+          widget: "string"
