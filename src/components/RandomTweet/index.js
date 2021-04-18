@@ -1,6 +1,6 @@
 import React from "react";
 import { Tweet } from "react-twitter-widgets";
-import ids from "./tweetIds";
+import ids from "../../lib/tweets";
 
 class Tweets extends React.Component {
   state = {

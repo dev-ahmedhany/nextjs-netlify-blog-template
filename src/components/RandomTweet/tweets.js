@@ -1,7 +1,7 @@
 import React from "react";
 import { Tweet } from "react-twitter-widgets";
 import shuffle from "shuffle-array";
-import ids from "./tweetIds";
+import ids from "../../lib/tweets";
 
 class Tweets extends React.Component {
   state = {
