@@ -153,8 +153,7 @@ collections:
         label: "Tweets"
         file: "content/tweets.json"
         description: "Tweets Ids"
-        widget: "list"
         fields:
-          label: ID
-          name: id
-          widget: "string"
+          - label: "id"
+            name: "IDs"
+            widget: "list"
