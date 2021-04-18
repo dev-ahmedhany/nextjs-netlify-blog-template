@@ -27,6 +27,11 @@ export default function Navigation() {
               </a>
             </Link>
           </li>
+          <li>
+            <Link href="/tweets">
+              <a className={router.pathname === "/tweets" ? "active" : null}>tweets</a>
+            </Link>
+          </li>
         </ul>
         <style jsx>
           {`

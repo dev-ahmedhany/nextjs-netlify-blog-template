@@ -8,8 +8,8 @@ class Tweets extends React.Component {
   };
   render() {
     return (
-      <div className="lesson-flex random-tweet">
-        <h3 class="tweet-head">Some words of encouragement!</h3>
+      <div className="random-tweet">
+        <h3 className="tweet-head">Some words of encouragement!</h3>
         <Tweet
           key={this.state.tweet}
           tweetId={this.state.tweet}
