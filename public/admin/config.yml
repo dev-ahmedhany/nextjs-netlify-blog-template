@@ -151,7 +151,7 @@ collections:
     files:
       - name: "tweets"
         label: "Tweets"
-        file: "content/tweets.json"
+        file: "content/tweets.yml"
         description: "Tweets Ids"
         fields:
           - name: tweets
