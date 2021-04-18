@@ -154,6 +154,13 @@ collections:
         file: "content/tweets.json"
         description: "Tweets Ids"
         fields:
-          - label: "id"
-            name: "IDs"
-            widget: "list"
+          - name: tweets
+            label: Tweets
+            label_singular: "Tweet"
+            description: "List of Tweets"
+            widget: list
+            field:
+              label: "ID"
+              name: "id"
+              widget: "string"
+              hint: "the tweet id appears in url"
