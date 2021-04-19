@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import {useEffect} from 'react'
 import renderToString from "next-mdx-remote/render-to-string";
 import { MdxRemote } from "next-mdx-remote/types";
 import hydrate from "next-mdx-remote/hydrate";
@@ -39,6 +40,40 @@ export default function Post({
   source,
 }: Props) {
   const content = hydrate(source, { components })
+
+  useEffect(() => {
+    setTimeout(() => {
+      if( (document.querySelector(".language-js") || document.querySelector(".language-html") ) &&  !window.klipse_settings)
+    {
+      // css selector for the html elements you want to klipsify
+      window.klipse_settings = new Object({eval_idle_msec: 200,
+        selector_eval_js :".language-js",selector_eval_html: ".language-html",
+      codemirror_options_in: {
+        lineWrapping: true,
+        lineNumbers: true
+      },
+      codemirror_options_out: {
+        lineWrapping: true,
+        lineNumbers: true
+      }}); 
+      // idle time in msec before the snippet is evaluated
+      const script = document.createElement('script');
+      //script.setAttribute('async', ''); // Or defer or nothing
+      script.setAttribute('id', "script-klipse-plugin");
+      script.setAttribute('src', "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js");
+      const body = document.querySelector("body"); // Or any other location , example head
+      body.appendChild(script);
+
+      const style = document.createElement('link');
+      style.setAttribute('rel', "stylesheet");
+      style.setAttribute('type', "text/css");
+      style.setAttribute('href', "https://storage.googleapis.com/app.klipse.tech/css/codemirror.css");
+      const head = document.querySelector("head"); // Or any other location , example head
+      head.appendChild(style);
+    }
+    }, 1000);
+  },[])
+  
   return (
     <PostLayout
       title={title}
