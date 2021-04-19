@@ -13,6 +13,13 @@ import RandomTweet from "../../components/RandomTweet";
 
 import YouTube from "react-youtube";
 
+declare global {
+  interface Window {
+    klipse_settings:any;
+  }
+}
+
+
 export type Props = {
   title: string;
   dateString: string;
