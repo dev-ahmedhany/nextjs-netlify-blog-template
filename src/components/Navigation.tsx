@@ -28,6 +28,17 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
+            <Link href="/lessons">
+              <a
+                className={
+                  router.pathname.startsWith("/lessons") ? "active" : null
+                }
+              >
+                Lessons
+              </a>
+            </Link>
+          </li>
+          <li>
             <Link href="/tweets">
               <a className={router.pathname === "/tweets" ? "active" : null}>tweets</a>
             </Link>
