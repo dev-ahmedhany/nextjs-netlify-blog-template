@@ -67,14 +67,14 @@ export default function Post({
       const script = document.createElement('script');
       //script.setAttribute('async', ''); // Or defer or nothing
       script.setAttribute('id', "script-klipse-plugin");
-      script.setAttribute('src', "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js");
+      script.setAttribute('src', "/klipse/klipse_plugin.min.js");
       const body = document.querySelector("body"); // Or any other location , example head
       body.appendChild(script);
 
       const style = document.createElement('link');
       style.setAttribute('rel', "stylesheet");
       style.setAttribute('type', "text/css");
-      style.setAttribute('href', "https://storage.googleapis.com/app.klipse.tech/css/codemirror.css");
+      style.setAttribute('href', "/klipse/codemirror.css");
       const head = document.querySelector("head"); // Or any other location , example head
       head.appendChild(style);
     }
